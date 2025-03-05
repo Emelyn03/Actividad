@@ -1,0 +1,42 @@
+// Ejemplo 3
+using System;
+
+class Empleado
+{
+    public string Nombre { get; set; }
+
+    public void Trabajar()
+    {
+        Console.WriteLine($"{Nombre} está trabajando.");
+    }
+}
+
+class Ingeniero : Empleado
+{
+    public void Diseñar()
+    {
+        Console.WriteLine($"{Nombre} está diseñando un proyecto.");
+    }
+}
+
+class Contador : Empleado
+{
+    public void Contabilizar()
+    {
+        Console.WriteLine($"{Nombre} está haciendo los estados financieros.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Ingeniero ingeniero = new Ingeniero { Nombre = "Laura" };
+        Contador contador = new Contador { Nombre = "Pedro" };
+
+        ingeniero.Trabajar();
+        ingeniero.Diseñar();
+        contador.Trabajar();
+        contador.Contabilizar();
+    }
+}
