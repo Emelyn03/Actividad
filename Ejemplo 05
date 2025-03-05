@@ -1,0 +1,43 @@
+
+}// Ejemplo 5
+using System;
+
+class Dispositivo
+{
+    public void Encender()
+    {
+        Console.WriteLine("El dispositivo está encendido.");
+    }
+}
+
+interface IReproducirMusica
+{
+    void Reproducir();
+}
+
+class Telefono : Dispositivo
+{
+    public void Llamar()
+    {
+        Console.WriteLine("Llamando a un contacto...");
+    }
+}
+
+class Smartphone : Telefono, IReproducirMusica
+{
+    public void Reproducir()
+    {
+        Console.WriteLine("Reproduciendo música en el smartphone.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Smartphone miTelefono = new Smartphone();
+        miTelefono.Encender();
+        miTelefono.Llamar();
+        miTelefono.Reproducir();
+    }
+}
