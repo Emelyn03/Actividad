@@ -1,0 +1,37 @@
+// Ejemplo 2
+using System;
+
+class Animal
+{
+    public void Respirar()
+    {
+        Console.WriteLine("Estoy respirando...");
+    }
+}
+
+class Mamifero : Animal
+{
+    public void Amamantar()
+    {
+        Console.WriteLine("Soy un mamífero y amamanto a mis crías.");
+    }
+}
+
+class Perro : Mamifero
+{
+    public void Ladrar()
+    {
+        Console.WriteLine("Guau Guau!");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Perro miPerro = new Perro();
+        miPerro.Respirar();
+        miPerro.Amamantar();
+        miPerro.Ladrar();
+    }
+}
